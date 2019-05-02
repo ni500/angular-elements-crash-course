@@ -20,13 +20,24 @@ export class DashboardPageComponent {
 
   private _add(tileKind: string): void {
 
-    const data =  [
+    const data = [
       Math.round(Math.random() * 100),
       Math.round(Math.random() * 100),
       Math.round(Math.random() * 100)
     ];
 
     // TODO: Add custom element to page
+
+    const content = document.getElementById('content');
+
+    const tile = document.createElement(tileKind);
+
+    tile.setAttribute('class', 'col-lg-4 col-md-3 col-sm-2');
+    tile.setAttribute('a', '' + data[0]);
+    tile.setAttribute('b', '' + data[1]);
+    tile.setAttribute('c', '' + data[2]);
+
+    content.appendChild(tile);
 
   }
 
