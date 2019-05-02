@@ -13,6 +13,7 @@ export class ExternalDashboardTileService {
     if (this.loaded) return;
 
     // TODO: Load script
+    
   }
 
 }
